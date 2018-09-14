@@ -318,7 +318,7 @@ DWORD WINAPI DirectXInit(__in  LPVOID lpParameter) {
 	if (MH_CreateHook((DWORD_PTR*)dVtable[42], &hkEndScene, reinterpret_cast<void**>(&oEndScene)) != MH_OK) { return 1; }
 	if (MH_EnableHook((DWORD_PTR*)dVtable[42]) != MH_OK) { return 1; }
 
-	processHandle = tmpWnd;
+	processHandle = tmpWnd; 
 	d3ddev->Release();
 	d3d->Release();
 	DestroyWindow(tmpWnd);
